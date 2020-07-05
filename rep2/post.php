@@ -212,7 +212,7 @@ PostDataStore::set($post_config_key, array(
 PostDataStore::set($post_backup_key, $post_cache);
 
 // cookie “Ç‚Ýž‚Ý
-$cookie_key = $_login->user_u . '/' . P2Util::normalizeHostName(P2HostMgr::isHostBbsPink($host) ? 'www.bbspink.com' : P2HostMgr::isHost2chs($host) ? 'www.2ch.net' : $host); // ”E–@’ ‘Î‰ž
+$cookie_key = $_login->user_u . '/' . (P2Util::normalizeHostName(P2HostMgr::isHostBbsPink($host) ? 'www.bbspink.com' : P2HostMgr::isHost2chs($host)) ? 'www.2ch.net' : $host); // ”E–@’ ‘Î‰ž 
 if ($p2cookies = CookieDataStore::get($cookie_key)) {
     if (is_array($p2cookies)) {
         if (array_key_exists('expires', $p2cookies)) {
