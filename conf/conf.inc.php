@@ -292,6 +292,8 @@ function p2_init()
     include P2_LIB_DIR . '/bootstrap.php';
 }
 
+header("Referrer-Policy: no-referrer"); 
+
 // }}}
 
 /*
