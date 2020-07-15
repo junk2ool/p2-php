@@ -2,6 +2,9 @@
   "name": "open774/p2-php",
   "description": "The server side 2ch viewer written in PHP",
   "license": "X11",
+  "config": {
+    "process-timeout": 1200
+  },
   "repositories": [
     {
       "type": "pear",
