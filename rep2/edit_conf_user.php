@@ -606,6 +606,7 @@ if ($flags & P2_EDIT_CONF_USER_SKIPPED) {
         array('expack.tgrep.quicksearch', '一発検索'),
         array('expack.tgrep.recent_num', '検索履歴を記録する数（記録しない:0）'),
         array('expack.tgrep.recent2_num', 'サーチボックスに検索履歴を記録する数、Safari専用（記録しない:0）'),
+        array('expack.tgrep.engine', '検索に使用する検索エンジン'),
     );
     printEditConfGroupHtml($groupname, $conflist, $flags);
 }
