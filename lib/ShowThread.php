@@ -681,6 +681,11 @@ abstract class ShowThread
         $info = array();
         $type = self::NG_NONE;
 
+        // >>1 をあぼーんの対象外にする
+        if ($_conf['ngaborn_exclude_one'] && $i == 1) {
+            return $type;
+        }
+
         // {{{ 頻出IDチェック
 
         if ($this->_ngaborn_frequent && $id && $this->thread->idcount[$id] >= $_conf['ngaborn_frequent_num']) {

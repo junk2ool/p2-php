@@ -379,6 +379,10 @@ $conf_user_rules['ngaborn_daylimit'] = array('emptyToDef', 'notIntExceptMinusToD
 $conf_user_def['ngaborn_purge_aborn'] = 0;  // (0)
 $conf_user_rad['ngaborn_purge_aborn'] = array('1' => '‚Í‚¢', '0' => '‚¢‚¢‚¦');
 
+// >>1 ‚ð‚ ‚Ú[‚ñ‚Ì‘ÎÛŠO‚É‚·‚é(‚·‚é:1, ‚µ‚È‚¢:0)
+$conf_user_def['ngaborn_exclude_one'] = 0; // (0)
+$conf_user_rad['ngaborn_exclude_one'] = array('1' => '‚·‚é', '0' => '‚µ‚È‚¢');
+
 // }}}
 // {{{ 2ch API
 
