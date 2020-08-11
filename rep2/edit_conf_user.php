@@ -868,6 +868,25 @@ if ($flags & P2_EDIT_CONF_USER_SKIPPED) {
 }
 
 // }}}
+// {{{ expack - ip2host
+
+$groupname = 'ip2host';
+$groups[] = $groupname;
+$flags = getGroupShowFlags($groupname);
+if ($flags & P2_EDIT_CONF_USER_SKIPPED) {
+    $keep_old = true;
+} else {
+    $conflist = array(
+        array('ip2host.enabled', 'ip2hostを利用'),
+        array('ip2host.replace.type', '書き換えのタイミング'),
+        array('ip2host.cache.type', 'キャッシュ方法'),
+        array('ip2host.cache.size', 'キャッシュの上限数'),
+        array('ip2host.aborn.enabled', '逆引き後のあぼーん処理'),
+    );
+    printEditConfGroupHtml($groupname, $conflist, $flags);
+}
+
+// }}}
 // }}}
 
 // PC用表示

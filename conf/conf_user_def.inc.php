@@ -627,7 +627,12 @@ include P2_CONFIG_DIR . '/conf_user_def_wiki.inc.php';
 include P2_CONFIG_DIR . '/conf_user_def_live.inc.php';
 
 // }}}
+// {{{ ip2host
 
+include P2_CONFIG_DIR . '/conf_user_def_ip2host.inc.php';
+
+// }}}
+    
 /*
  * Local Variables:
  * mode: php
