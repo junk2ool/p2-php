@@ -415,7 +415,11 @@ function postIt($host, $bbs, $key, $post)
         $req = P2Commun::createHTTPRequest ($bbs_cgi_url,HTTP_Request2::METHOD_POST);
 
         // ヘッダ
-        $req->setHeader('Referer', "http://{$host}/{$bbs}/{$key}/");
+        if (P2HostMgr::isHost2chs($host) && ! P2HostMgr::isHostBbsPink($host) && $_conf['2ch_ssl.post']) {
+            $req->setHeader('Referer', "https://{$host}/{$bbs}/{$key}/");
+        } else {
+            $req->setHeader('Referer', "http://{$host}/{$bbs}/{$key}/");
+        }
 
         // クッキー
         if ($p2cookies) {
