@@ -530,6 +530,9 @@ EOJS;
             $msg = preg_replace('/&amp(?=[^;])/', '&', $msg);
         }
 
+		// サロゲートペアの数値文字参照を変換
+        $msg = P2Util::replaceNumericalSurrogatePair($msg);
+		
         // &補正
         $msg = preg_replace('/&(?!#?\\w+;)/', '&amp;', $msg);
 

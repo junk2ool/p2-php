@@ -296,6 +296,8 @@ class ThreadList
 
                         $threads[$matches[2]]['key']    = $matches[1];      // スレッドID
                         $threads[$matches[2]]['title']  = $matches[3];      // title
+                        // サロゲートペアの数値文字参照を変換
+                        $threads[$matches[2]]['title']  = P2Util::replaceNumericalSurrogatePair($threads[$matches[2]]['title']);
                         $threads[$matches[2]]['rc']     = $matches[4];      // rescount
 
                         $threads[$matches[2]]['param']  = implode('<>',array_fill(0, 5, '')); // lastmodify.txt に含まれないスレを表示できるように
